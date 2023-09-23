@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import matplotlib
 matplotlib.use('Agg')
-from wordcloud import WordCloud
+# from wordcloud import WordCloud
 
 
 @st.cache
@@ -20,9 +20,9 @@ def run_home_page():
 	
 	with st.beta_expander("Hope You Have a Wonderful Day!",expanded=True):
 		day_text = " ".join(df['Day'].tolist())
-		mywordcloud = WordCloud().generate(day_text)
+		# mywordcloud = WordCloud().generate(day_text)
 		fig = plt.figure()
-		plt.imshow(mywordcloud,interpolation='bilinear')
+		# plt.imshow(mywordcloud,interpolation='bilinear')
 		plt.axis('off')
 		st.pyplot(fig)
 
